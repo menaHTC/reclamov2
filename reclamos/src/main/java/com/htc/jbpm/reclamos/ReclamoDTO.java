@@ -12,6 +12,10 @@ public class ReclamoDTO implements java.io.Serializable
    private java.lang.String codCliente;
    private java.lang.String numVoucher;
 
+   private java.util.Date fechaReclamo;
+
+   private java.math.BigDecimal montoCompra;
+
    public ReclamoDTO()
    {
    }
@@ -36,10 +40,33 @@ public class ReclamoDTO implements java.io.Serializable
       this.numVoucher = numVoucher;
    }
 
-   public ReclamoDTO(java.lang.String codCliente, java.lang.String numVoucher)
+   public java.util.Date getFechaReclamo()
+   {
+      return this.fechaReclamo;
+   }
+
+   public void setFechaReclamo(java.util.Date fechaReclamo)
+   {
+      this.fechaReclamo = fechaReclamo;
+   }
+
+   public java.math.BigDecimal getMontoCompra()
+   {
+      return this.montoCompra;
+   }
+
+   public void setMontoCompra(java.math.BigDecimal montoCompra)
+   {
+      this.montoCompra = montoCompra;
+   }
+
+   public ReclamoDTO(java.lang.String codCliente, java.lang.String numVoucher,
+         java.util.Date fechaReclamo, java.math.BigDecimal montoCompra)
    {
       this.codCliente = codCliente;
       this.numVoucher = numVoucher;
+      this.fechaReclamo = fechaReclamo;
+      this.montoCompra = montoCompra;
    }
 
 }
