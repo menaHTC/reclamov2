@@ -2,7 +2,7 @@ package com.htc.jbpm.reclamos;
 
 import com.htc.jbpm.reclamos.ReclamoDTO
 
-rule "set as adult" ruleflow-group "reglaFechaCompra"
+rule "set as fechaValida" ruleflow-group "reglaFechaCompra"
 no-loop
 when
 	$p: ReclamoDTO(montoCompra > 18)
@@ -12,7 +12,7 @@ then
 	}
 end
 
-rule "set as teenager" ruleflow-group "reglaFechaCompra"
+rule "set as fechaInvalida" ruleflow-group "reglaFechaCompra"
 no-loop
 when
 	$p : ReclamoDTO(montoCompra< 18)
