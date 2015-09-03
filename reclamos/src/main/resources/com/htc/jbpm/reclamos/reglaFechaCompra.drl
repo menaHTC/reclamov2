@@ -5,7 +5,7 @@ import com.htc.jbpm.reclamos.ReclamoDTO
 rule "set as fechaValida" ruleflow-group "reglaFechaCompra"
 no-loop
 when
-	$p: ReclamoDTO(montoCompras > 18)
+	$p: ReclamoDTO(montoCompra > 18)
 then 
 	modify($p){
 		setFechaCompraValida(true);
