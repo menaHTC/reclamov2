@@ -1,6 +1,6 @@
 package com.htc.jbpm.reclamos;
 
-rule "set as adult" ruleflow-group "regalFechaCompra"
+rule "set as adult" ruleflow-group "reglaFechaCompra"
 no-loop
 when
 	$p: Person(age > 18)
@@ -10,7 +10,7 @@ then
 	}
 end
 
-rulse "set as teenager" ruleflow-group "regalFechaCompra"
+rule "set as teenager" ruleflow-group "reglaFechaCompra"
 no-loop
 when
 	$p : Person(age < 18)
