@@ -8,7 +8,7 @@ when
 	$p: ReclamoDTO(montoCompra > 18)
 then 
 	modify($p){
-		setAdult(true);
+		setFechaCompraValida(true);
 	}
 end
 
@@ -18,6 +18,6 @@ when
 	$p : ReclamoDTO(montoCompra< 18)
 then
 	modify($p){
-		setAdult(false);
+		setFechaCompraValida(false);
 	}
 end
