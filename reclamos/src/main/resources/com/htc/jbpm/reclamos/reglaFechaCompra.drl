@@ -6,6 +6,14 @@ function String hello(String name) {
     return "Hello "+name+"!";
 }
 
+public long compareDates(Date fechaCompra){
+		Date fechaActual = new Date();
+		long diff = Math.abs(fechaActual.getTime() - fechaCompra.getTime());
+		long diffDays = diff / (24 * 60 * 60 * 1000);
+		System.out.println("La diferencia en dias es: "+diffDays);
+		return diffDays;
+}
+
 rule "set as fechaValida" ruleflow-group "reglaFechaCompra"
 no-loop
 when
