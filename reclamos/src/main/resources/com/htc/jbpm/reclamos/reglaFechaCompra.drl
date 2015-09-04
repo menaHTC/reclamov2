@@ -18,7 +18,7 @@ function long compareDates(Date fechaCompra){
 rule "set as fechaValida" ruleflow-group "reglaFechaCompra"
 no-loop
 when
-	$p: ReclamoDTO(compareDates(fechaReclamo)<5)
+	$p: ReclamoDTO(compareDates(fechaReclamo)>2)
 then 
 	modify($p){
 		setFechaCompraValida(true);
@@ -28,7 +28,7 @@ end
 rule "set as fechaInvalida" ruleflow-group "reglaFechaCompra"
 no-loop
 when
-	$p : ReclamoDTO(montoCompra< 18)
+	$p: ReclamoDTO(compareDates(fechaReclamo)<=2)
 then
 	modify($p){
 		setFechaCompraValida(false);
