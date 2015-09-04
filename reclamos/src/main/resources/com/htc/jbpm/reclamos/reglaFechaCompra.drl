@@ -8,7 +8,6 @@ when
 	$p: ReclamoDTO(montoCompra > 18)
 then 
 	modify($p){
-	        System.out.println("Fecha de compra valida!!!");
 		setFechaCompraValida(true);
 	}
 end
@@ -19,7 +18,6 @@ when
 	$p : ReclamoDTO(montoCompra< 18)
 then
 	modify($p){
-		System.out.println("Fecha de compra invalida!!!");
 		setFechaCompraValida(false);
 	}
 end
