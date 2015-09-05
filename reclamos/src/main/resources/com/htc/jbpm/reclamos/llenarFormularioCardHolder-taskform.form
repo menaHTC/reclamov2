@@ -3,21 +3,21 @@
 <property name="name" value="llenarFormularioCardHolder-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
-<field position="4" name="reclamo_lugarCompra" type="InputText" id="1633892407">
+<field position="0" name="reclamo_codCliente" type="InputText" id="1559156159">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;lugarCompra (reclamo)quot;"/>
+<property name="label" value="quot;enquot;,quot;codCliente (reclamo)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="_reclamo/lugarCompra"/>
-<property name="outputBinding" value="reclamo_/lugarCompra"/>
+<property name="inputBinding" value="_reclamo/codCliente"/>
+<property name="outputBinding" value="reclamo_/codCliente"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="6" name="reclamo_tipoGestion" bag-type="java.lang.String" type="MultipleInput" id="1551196406">
+<field position="1" name="reclamo_fechaCompra" type="InputDate" id="482728342">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;tipoGestion (reclamo)quot;"/>
+<property name="label" value="quot;enquot;,quot;fechaCompra (reclamo)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="_reclamo/tipoGestion"/>
-<property name="outputBinding" value="reclamo_/tipoGestion"/>
-<property name="fieldClass" value="java.util.List"/>
+<property name="inputBinding" value="_reclamo/fechaCompra"/>
+<property name="outputBinding" value="reclamo_/fechaCompra"/>
+<property name="fieldClass" value="java.util.Date"/>
 </field>
 <field position="2" name="reclamo_fechaCompraValida" type="CheckBox" id="1323635590">
 <property name="fieldRequired" value="false"/>
@@ -27,12 +27,24 @@
 <property name="outputBinding" value="reclamo_/fechaCompraValida"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
 </field>
-<field position="0" name="reclamo_codCliente" type="InputText" id="1559156159">
+<field position="3" name="reclamo_fechaReclamo" type="InputDate" id="835905539">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;codCliente (reclamo)quot;"/>
+<property name="label" value="quot;enquot;,quot;fechaReclamo (reclamo)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="_reclamo/codCliente"/>
-<property name="outputBinding" value="reclamo_/codCliente"/>
+<property name="inputBinding" value="_reclamo/fechaReclamo"/>
+<property name="outputBinding" value="reclamo_/fechaReclamo"/>
+<property name="fieldClass" value="java.util.Date"/>
+</field>
+<field position="4" name="reclamo_lugarCompra" type="InputTextArea" id="1633892407">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;lugarCompra (reclamo)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="false"/>
+<property name="isHTML" value="false"/>
+<property name="hideContent" value="false"/>
+<property name="inputBinding" value="_reclamo/lugarCompra"/>
+<property name="outputBinding" value="reclamo_/lugarCompra"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
 <field position="5" name="reclamo_montoCompra" type="InputTextBigDecimal" id="981557867">
@@ -43,21 +55,13 @@
 <property name="outputBinding" value="reclamo_/montoCompra"/>
 <property name="fieldClass" value="java.math.BigDecimal"/>
 </field>
-<field position="3" name="reclamo_fechaReclamo" type="InputDate" id="835905539">
+<field position="6" name="reclamo_tipoGestion" bag-type="java.lang.String" type="MultipleInput" id="1551196406">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;fechaReclamo (reclamo)quot;"/>
+<property name="label" value="quot;enquot;,quot;tipoGestion (reclamo)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="_reclamo/fechaReclamo"/>
-<property name="outputBinding" value="reclamo_/fechaReclamo"/>
-<property name="fieldClass" value="java.util.Date"/>
-</field>
-<field position="1" name="reclamo_fechaCompra" type="InputDate" id="482728342">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;fechaCompra (reclamo)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="_reclamo/fechaCompra"/>
-<property name="outputBinding" value="reclamo_/fechaCompra"/>
-<property name="fieldClass" value="java.util.Date"/>
+<property name="inputBinding" value="_reclamo/tipoGestion"/>
+<property name="outputBinding" value="reclamo_/tipoGestion"/>
+<property name="fieldClass" value="java.util.List"/>
 </field>
 <dataHolder inputId="_reclamo" name="#0000A0" type="dataModelerEntry" outId="reclamo_" value="com.htc.jbpm.reclamos.ReclamoDTO" id="reclamo"/>
 </form>
