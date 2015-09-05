@@ -20,7 +20,7 @@ public class ReclamoDTO implements java.io.Serializable
 
    private java.lang.String lugarCompra;
 
-   private java.util.List<java.lang.String> tipoGestion;
+   private java.lang.String tipoGestion;
 
    public ReclamoDTO()
    {
@@ -86,12 +86,12 @@ public class ReclamoDTO implements java.io.Serializable
       this.lugarCompra = lugarCompra;
    }
 
-   public java.util.List<java.lang.String> getTipoGestion()
+   public java.lang.String getTipoGestion()
    {
       return this.tipoGestion;
    }
 
-   public void setTipoGestion(java.util.List<java.lang.String> tipoGestion)
+   public void setTipoGestion(java.lang.String tipoGestion)
    {
       this.tipoGestion = tipoGestion;
    }
@@ -99,7 +99,7 @@ public class ReclamoDTO implements java.io.Serializable
    public ReclamoDTO(java.lang.String codCliente, java.util.Date fechaReclamo,
          java.math.BigDecimal montoCompra, java.lang.Boolean fechaCompraValida,
          java.util.Date fechaCompra, java.lang.String lugarCompra,
-         java.util.List<java.lang.String> tipoGestion)
+         java.lang.String tipoGestion)
    {
       this.codCliente = codCliente;
       this.fechaReclamo = fechaReclamo;
