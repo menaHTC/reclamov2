@@ -16,6 +16,12 @@ public class ReclamoDTO implements java.io.Serializable
 
    private java.lang.Boolean fechaCompraValida;
 
+   private java.util.Date fechaCompra;
+
+   private java.lang.String lugarCompra;
+
+   private java.util.List<java.lang.String> tipoGestion;
+
    public ReclamoDTO()
    {
    }
@@ -60,13 +66,48 @@ public class ReclamoDTO implements java.io.Serializable
       this.fechaCompraValida = fechaCompraValida;
    }
 
+   public java.util.Date getFechaCompra()
+   {
+      return this.fechaCompra;
+   }
+
+   public void setFechaCompra(java.util.Date fechaCompra)
+   {
+      this.fechaCompra = fechaCompra;
+   }
+
+   public java.lang.String getLugarCompra()
+   {
+      return this.lugarCompra;
+   }
+
+   public void setLugarCompra(java.lang.String lugarCompra)
+   {
+      this.lugarCompra = lugarCompra;
+   }
+
+   public java.util.List<java.lang.String> getTipoGestion()
+   {
+      return this.tipoGestion;
+   }
+
+   public void setTipoGestion(java.util.List<java.lang.String> tipoGestion)
+   {
+      this.tipoGestion = tipoGestion;
+   }
+
    public ReclamoDTO(java.lang.String codCliente, java.util.Date fechaReclamo,
-         java.math.BigDecimal montoCompra, java.lang.Boolean fechaCompraValida)
+         java.math.BigDecimal montoCompra, java.lang.Boolean fechaCompraValida,
+         java.util.Date fechaCompra, java.lang.String lugarCompra,
+         java.util.List<java.lang.String> tipoGestion)
    {
       this.codCliente = codCliente;
       this.fechaReclamo = fechaReclamo;
       this.montoCompra = montoCompra;
       this.fechaCompraValida = fechaCompraValida;
+      this.fechaCompra = fechaCompra;
+      this.lugarCompra = lugarCompra;
+      this.tipoGestion = tipoGestion;
    }
 
 }
