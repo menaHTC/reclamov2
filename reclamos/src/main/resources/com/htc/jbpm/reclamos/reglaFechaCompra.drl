@@ -3,10 +3,6 @@ package com.htc.jbpm.reclamos;
 import com.htc.jbpm.reclamos.ReclamoDTO
 import java.util.Date
 
-function String hello(String name) {
-    return "Hello "+name+"!";
-}
-
 function long compareDates(Date fechaCompra){
 	Date fechaActual = new Date();
 	long diff = Math.abs(fechaActual.getTime() - fechaCompra.getTime());
@@ -18,7 +14,7 @@ function long compareDates(Date fechaCompra){
 rule "set as fechaValida" ruleflow-group "reglaFechaCompra"
 no-loop
 when
-	$p: ReclamoDTO(compareDates(fechaReclamo)>2)
+	$p: ReclamoDTO(compareDates(fechaCompra)>2)
 then 
 	modify($p){
 		setFechaCompraValida(true);
@@ -28,7 +24,7 @@ end
 rule "set as fechaInvalida" ruleflow-group "reglaFechaCompra"
 no-loop
 when
-	$p: ReclamoDTO(compareDates(fechaReclamo)<=2)
+	$p: ReclamoDTO(compareDates(fechaCompra)<=2)
 then
 	modify($p){
 		setFechaCompraValida(false);
