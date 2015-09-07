@@ -26,6 +26,8 @@ public class ReclamoDTO implements java.io.Serializable
 
    private String estadoDocumentacion;
 
+   private java.lang.String incoming;
+
    public ReclamoDTO()
    {
    }
@@ -120,11 +122,21 @@ public class ReclamoDTO implements java.io.Serializable
       this.estadoReclamo = estadoReclamo;
    }
 
+   public java.lang.String getIncoming()
+   {
+      return this.incoming;
+   }
+
+   public void setIncoming(java.lang.String incoming)
+   {
+      this.incoming = incoming;
+   }
+
    public ReclamoDTO(java.lang.String codCliente, java.util.Date fechaReclamo,
          java.math.BigDecimal montoCompra, java.lang.Boolean fechaCompraValida,
          java.util.Date fechaCompra, java.lang.String lugarCompra,
          java.lang.String tipoGestion, java.lang.String estadoReclamo,
-         java.lang.String estadoDocumentacion)
+         java.lang.String estadoDocumentacion, java.lang.String incoming)
    {
       this.codCliente = codCliente;
       this.fechaReclamo = fechaReclamo;
@@ -135,6 +147,7 @@ public class ReclamoDTO implements java.io.Serializable
       this.tipoGestion = tipoGestion;
       this.estadoReclamo = estadoReclamo;
       this.estadoDocumentacion = estadoDocumentacion;
+      this.incoming = incoming;
    }
 
 }
