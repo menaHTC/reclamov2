@@ -9,16 +9,18 @@ public class SolicitudCredito implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "Encargado")
+   @org.kie.api.definition.type.Label("Encargado")
    private java.lang.String nombreSuperior;
-   @org.kie.api.definition.type.Label(value = "Credito a favor de")
+   @org.kie.api.definition.type.Label("Credito a favor de")
    private java.lang.String solicitanteCredito;
-   @org.kie.api.definition.type.Label(value = "numero de cuenta")
+   @org.kie.api.definition.type.Label("numero de cuenta")
    private java.lang.String numeroCuenta;
-   @org.kie.api.definition.type.Label(value = "Monto ")
+   @org.kie.api.definition.type.Label("Monto ")
    private java.math.BigDecimal monto;
-   @org.kie.api.definition.type.Label(value = "Por concepto de:")
+   @org.kie.api.definition.type.Label("Por concepto de:")
    private java.lang.String concepto;
+
+   private java.lang.String cobroAplicado;
 
    public SolicitudCredito()
    {
@@ -74,15 +76,27 @@ public class SolicitudCredito implements java.io.Serializable
       this.concepto = concepto;
    }
 
+   public java.lang.String getCobroAplicado()
+   {
+      return this.cobroAplicado;
+   }
+
+   public void setCobroAplicado(java.lang.String cobroAplicado)
+   {
+      this.cobroAplicado = cobroAplicado;
+   }
+
    public SolicitudCredito(java.lang.String nombreSuperior,
          java.lang.String solicitanteCredito, java.lang.String numeroCuenta,
-         java.math.BigDecimal monto, java.lang.String concepto)
+         java.math.BigDecimal monto, java.lang.String concepto,
+         java.lang.String cobroAplicado)
    {
       this.nombreSuperior = nombreSuperior;
       this.solicitanteCredito = solicitanteCredito;
       this.numeroCuenta = numeroCuenta;
       this.monto = monto;
       this.concepto = concepto;
+      this.cobroAplicado = cobroAplicado;
    }
 
 }
