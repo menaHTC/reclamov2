@@ -26,6 +26,8 @@ public class SolicitudCredito implements java.io.Serializable
 
    private java.lang.String documentacionCorrecta;
 
+   private java.lang.String aplicarCredito;
+
    public SolicitudCredito()
    {
    }
@@ -110,11 +112,21 @@ public class SolicitudCredito implements java.io.Serializable
       this.reembolsoGestionado = reembolsoGestionado;
    }
 
+   public java.lang.String getAplicarCredito()
+   {
+      return this.aplicarCredito;
+   }
+
+   public void setAplicarCredito(java.lang.String aplicarCredito)
+   {
+      this.aplicarCredito = aplicarCredito;
+   }
+
    public SolicitudCredito(java.lang.String nombreSuperior,
          java.lang.String solicitanteCredito, java.lang.String numeroCuenta,
          java.math.BigDecimal monto, java.lang.String concepto,
          java.lang.String cobroAplicado, java.lang.String reembolsoGestionado,
-         java.lang.String documentacionCorrecta)
+         java.lang.String documentacionCorrecta, java.lang.String aplicarCredito)
    {
       this.nombreSuperior = nombreSuperior;
       this.solicitanteCredito = solicitanteCredito;
@@ -124,6 +136,7 @@ public class SolicitudCredito implements java.io.Serializable
       this.cobroAplicado = cobroAplicado;
       this.reembolsoGestionado = reembolsoGestionado;
       this.documentacionCorrecta = documentacionCorrecta;
+      this.aplicarCredito = aplicarCredito;
    }
 
 }
