@@ -12,12 +12,6 @@
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new com.htc.jbpm.ws.reclamos.cliente.GuardarReclamoV2()</identifier>
-            <parameters/>
-            <name>GuardarReclamo</name>
-        </work-item-handler>
-        <work-item-handler>
-            <resolver>mvel</resolver>
             <identifier>new org.jbpm.process.workitem.webservice.WebServiceWorkItemHandler(ksession, classLoader)</identifier>
             <parameters/>
             <name>WebService</name>
@@ -39,6 +33,12 @@
             <identifier>new org.jbpm.process.workitem.bpmn2.ServiceTaskHandler(ksession, classLoader)</identifier>
             <parameters/>
             <name>Service Task</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.htc.jbpm.ws.reclamos.cliente.GuardarReclamoV2()</identifier>
+            <parameters/>
+            <name>Guardar Reclamo</name>
         </work-item-handler>
         <work-item-handler>
             <resolver>mvel</resolver>
