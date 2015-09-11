@@ -28,6 +28,8 @@ public class ReclamoDTO implements java.io.Serializable
 
    private java.lang.String incoming;
 
+   private java.lang.String numCuenta;
+
    public ReclamoDTO()
    {
    }
@@ -132,11 +134,22 @@ public class ReclamoDTO implements java.io.Serializable
       this.incoming = incoming;
    }
 
+   public java.lang.String getNumCuenta()
+   {
+      return this.numCuenta;
+   }
+
+   public void setNumCuenta(java.lang.String numCuenta)
+   {
+      this.numCuenta = numCuenta;
+   }
+
    public ReclamoDTO(java.lang.String codCliente, java.util.Date fechaReclamo,
          java.math.BigDecimal montoCompra, java.lang.Boolean fechaCompraValida,
          java.util.Date fechaCompra, java.lang.String lugarCompra,
          java.lang.String tipoGestion, java.lang.String estadoReclamo,
-         java.lang.String estadoDocumentacion, java.lang.String incoming)
+         java.lang.String estadoDocumentacion, java.lang.String incoming,
+         java.lang.String numCuenta)
    {
       this.codCliente = codCliente;
       this.fechaReclamo = fechaReclamo;
@@ -148,6 +161,7 @@ public class ReclamoDTO implements java.io.Serializable
       this.estadoReclamo = estadoReclamo;
       this.estadoDocumentacion = estadoDocumentacion;
       this.incoming = incoming;
+      this.numCuenta = numCuenta;
    }
 
 }
